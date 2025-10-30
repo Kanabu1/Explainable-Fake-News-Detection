@@ -23,9 +23,9 @@ The dataset used in this project is the LIAR dataset, which contains over 12,000
 
 3. Model Training & Fine-Tuning – A two-stage approach is adopted:
 
-Stage 1 (BERT): Fine-tuned for binary classification to predict fake or real.
+    Stage 1 (BERT): Fine-tuned for binary classification to predict fake or real.
 
-Stage 2 (T5): Fine-tuned for text generation to produce short, natural language explanations for the model’s predictions.
+    Stage 2 (T5): Fine-tuned for text generation to produce short, natural language explanations for the model’s predictions.
 
 4. Explainability & Evaluation – Explainability & Evaluation – Explainability is achieved through both T5-generated explanations and interpretability frameworks like LIME or SHAP, which highlight the most influential text features. Performance is evaluated using accuracy, F1-score, and confusion matrix analysis.
 
