@@ -1,4 +1,8 @@
 # Explainable-Fake-News-Detection
+## Overview
+
+This project focuses on building a Fake News Detection System using Natural Language Processing (NLP) and Transformer-based models. The goal is to accurately classify news articles as real or fake while providing human-readable explanations for each prediction. Using BERT for classification and T5 for text-based explanations, the project combines the power of contextual understanding and generative modeling to enhance both accuracy and transparency in fake news detection. The system is trained and evaluated on the LIAR dataset, which contains labeled political statements with supporting metadata.
+
 ## Problem Statement
 
 The rise of fake news has become one of the most pressing challenges in the digital information age. With social media and online platforms allowing rapid spreading of unverified information, distinguishing between factual and fabricated news has grown increasingly difficult. This project aims to develop a machine learning model that can automatically detect fake news using Natural Language Processing (NLP) techniques. The goal is to not only classify news articles as fake or real but also provide explanations for the model’s predictions to enhance transparency and trust.
@@ -9,22 +13,21 @@ The dataset used in this project is the LIAR dataset, which contains over 12,000
 
 ## Methodologies
 
-This project follows a systematic and research-driven methodology comprising five key stages:
-
-Data Collection & Exploration – The project uses the LIAR dataset, which contains labeled short political statements alongside metadata such as speaker, context, and truth labels. The dataset is inspected for completeness, inconsistencies, and class distribution to ensure readiness for modeling.
-
-Data Preprocessing & Cleaning – The text data is cleaned to remove unwanted characters, punctuation, and stopwords. Tokenization and lowercasing are applied to prepare the text for modeling. The metadata is also explored for potential auxiliary features that could improve prediction accuracy.
-
-Exploratory Data Analysis (EDA) – Before modeling, EDA is performed to uncover trends in fake versus real statements, analyze label balance, and identify key words or phrases frequently associated with misinformation.
 
 
-Model Training & Fine-Tuning – A two-stage approach is adopted:
+
+
+1. Data Preprocessing & Cleaning – The text data is cleaned to remove unwanted characters, punctuation, and stopwords. Tokenization and lowercasing are applied to prepare the text for modeling. The metadata is also explored for potential auxiliary features that could improve prediction accuracy.
+
+2. Exploratory Data Analysis (EDA) – Before modeling, EDA is performed to uncover trends in fake versus real statements, analyze label balance, and identify key words or phrases frequently associated with misinformation.
+
+3. Model Training & Fine-Tuning – A two-stage approach is adopted:
 
 Stage 1 (BERT): Fine-tuned for binary classification to predict fake or real.
 
 Stage 2 (T5): Fine-tuned for text generation to produce short, natural language explanations for the model’s predictions.
 
-Explainability & Evaluation – Explainability & Evaluation – Explainability is achieved through both T5-generated explanations and interpretability frameworks like LIME or SHAP, which highlight the most influential text features. Performance is evaluated using accuracy, F1-score, and confusion matrix analysis.
+4. Explainability & Evaluation – Explainability & Evaluation – Explainability is achieved through both T5-generated explanations and interpretability frameworks like LIME or SHAP, which highlight the most influential text features. Performance is evaluated using accuracy, F1-score, and confusion matrix analysis.
 
 ## Model Architecture
 
