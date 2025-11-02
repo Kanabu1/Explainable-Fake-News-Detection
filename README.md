@@ -32,7 +32,14 @@ The dataset used in this project is the LIAR dataset, which contains over 12,000
 ## Model Architecture
 
 This project implements two transformer models combining the strengths of BERT and T5.
+### Transformers
+-Transformer model is a type of neural network architecture that excels at processing sequential data. Transformers are based on a mechanism called self-attention, which allows the model to weigh the importance of different words in a sequence relative to each other regardless of their position in the text.
 
+-Self-attention calculates how much each word should “attend” to other words in the same sequence.
+
+-Each word’s representation is updated by taking a weighted sum of all the words, where the weights are learned attention scores.
+
+-The transformer consists of two main components the encoder and decoder.
 Stage 1: BERT (Bidirectional Encoder Representations from Transformers)
 BERT is used for fake news classification. It processes text bidirectionally, capturing context from both directions in a sentence. This allows it to understand complex linguistic cues, sarcasm, and context-dependent meanings — all of which are essential in identifying fake news. The model’s output is a binary prediction indicating whether the input statement is fake or real.
 
