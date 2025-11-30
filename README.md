@@ -112,33 +112,33 @@ Pre-training: BERT was trained on the entire English Wikipedia (2.5 billion word
 #### How BERT Works in this Project
 Adapted BERT to do more than just read statements.It reads Metadata as well.
 
-A. The Input
+##### A. The Input
 
 Standard BERT models just take a sentence.The model takes a composite string.The input looks like this:
 
-"[CLS] Barack Obama (Democrat) stated in Campaign Speech: We have cut taxes... [SEP]"
+* "[CLS] Barack Obama (Democrat) stated in Campaign Speech: We have cut taxes... [SEP]"
 
-[CLS] Token: (Classification) Added at the start. This special token acts as a "bucket" that collects the mathematical meaning of the entire sequence.
+* [CLS] Token: (Classification) Added at the start. This special token acts as a "bucket" that collects the mathematical meaning of the entire sequence.
 
-[SEP] Token: (Separator) Tells BERT where the input ends.
+* [SEP] Token: (Separator) Tells BERT where the input ends.
 
 By putting the Speaker and Party inside the text string, BERT's self-attention mechanism learns relationships like:
 
-"If Speaker X says Y, it is usually False."
+* "If Speaker X says Y, it is usually False."
 
-"If Topic Z is discussed in a 'Facebook Post', it has a higher probability of being Fake."
+* "If Topic Z is discussed in a 'Facebook Post', it has a higher probability of being Fake."
 
-B.Binary Classification
+#### B.Binary Classification
 
-The model used is the bert-base-uncased with a Binary Classification Head.
+* The model used is the bert-base-uncased with a Binary Classification Head.
 
-Tokenization:text is broken into "WordPieces"
+* Tokenization:text is broken into "WordPieces"
 
-Encoding: These pieces are converted into vectors (lists of numbers) of size 768.
+* Encoding: These pieces are converted into vectors (lists of numbers) of size 768.
 
-Processing: The vectors pass through 12 layers of "Self-Attention," where they update each other based on context.
+* Processing: The vectors pass through 12 layers of "Self-Attention," where they update each other based on context.
 
-The classification (The Judge):
+#### The classification:
 
 The model ignores all the word vectors except for the [CLS] vector.
 
@@ -266,7 +266,7 @@ Every task is reformulated as text input - text output, ensuring uniformity acro
 
 ## Usage
 
-streamlit run app_bert.py
+streamlit run app.py
 
 
 ### Testing the Model:
